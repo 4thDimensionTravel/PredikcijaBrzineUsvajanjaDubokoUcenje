@@ -3,7 +3,7 @@
 Pet Adoption Speed Prediction (Multimodal Deep Learning)
 This project implements a Multimodal Deep Learning system to predict the speed at which pets are adopted from the PetFinder platform. The core innovation lies in a hybrid architecture that simultaneously processes visual data (images of pets) and structured tabular data (age, breed, color, health status) to classify the AdoptionSpeed.
 
-📖 Project Overview
+Project Overview
 The objective is to predict the adoption speed category (0-4) by leveraging both the physical appearance of the animal and its metadata. The project explores and compares three distinct neural network architectures:
 
 Custom CNN (LeNet-5 Variation)
@@ -14,7 +14,7 @@ Depthwise Separable Convolutions (Efficient Architecture)
 
 Each model uses a Late Fusion approach, where features extracted from images are merged (Concatenate) with features from tabular data before the final classification layers.
 
-📂 File Structure
+File Structure
 main.py: A comprehensive script for Exploratory Data Analysis (EDA) and Image Analysis. It includes functions for:
 
 Analyzing breeds, colors, and naming trends by state.
@@ -29,7 +29,7 @@ separable.py: An optimized architecture using SeparableConv2D layers, significan
 
 sample_subset.py: A utility script to generate a smaller, balanced subset of the data (e.g., 2000 training samples) for faster iteration and debugging.
 
-🛠️ Tech Stack
+Tech Stack
 Deep Learning: TensorFlow / Keras
 
 Data Analysis: Pandas, NumPy
@@ -40,7 +40,7 @@ Image Processing: PIL (Pillow)
 
 Dataset from: https://github.com/MilanBojic1999/RAF-PetFinder-dataset.git
 
-🧠 Model Architecture
+Model Architecture
 All implemented models follow a dual-input "Two-Stream" design:
 
 Image Branch: Takes a 64x64x3 image as input, processes it through convolutional blocks (or a pre-trained ResNet), and outputs a feature vector.
